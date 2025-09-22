@@ -1,41 +1,83 @@
+/* 🌐 Structure générale */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  color: #333;
+  text-align: center;
 }
 
+/* 🧭 Menu de navigation */
+nav {
+  background-color: #333;
+  padding: 15px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* 🖼️ Photo ronde */
 .photo-ronde {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   margin-top: 30px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-h1 {
-  text-align: center;
+/* 👋 Section d’introduction */
+.intro h1 {
   margin-top: 20px;
+  font-size: 28px;
 }
 
-p {
+.summary {
   max-width: 600px;
   margin: 20px auto;
-  text-align: center;
   line-height: 1.6;
 }
 
-body {
-  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+/* 🧠 Sections principales */
+section {
+  padding: 40px 20px;
 }
-.about-text {
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+section ul {
+  max-width: 600px;
+  margin: 0 auto;
   text-align: left;
-  max-width: 600px;
-  margin: 20px auto;
   line-height: 1.6;
 }
 
+/* 📞 Pied de page */
+footer {
+  background-color: #eee;
+  padding: 20px;
+  font-size: 0.9em;
+}

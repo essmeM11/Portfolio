@@ -30,5 +30,12 @@ p {
 }
 
 body {
-  background-color: pink;
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
 }
+.about-text {
+  text-align: left;
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+

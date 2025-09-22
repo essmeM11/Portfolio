@@ -6,6 +6,9 @@ body {
   background: linear-gradient(to bottom, #ffffff, #e0e0e0);
   color: #333;
   text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
 }
 
 /* 🧭 Menu de navigation */

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Essme Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Projects</h1>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projects">
+      <h2>Featured Projects</h2>
+
+      <div class="project-card">
+        <h3>📊 Power BI – GDP vs Unemployment</h3>
+        <p>Merged datasets using an inner join on the year column. Built a dashboard to visualize trends.</p>
+        <a href="#">View Dashboard</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🧼 Excel – Data Cleaning</h3>
+        <p>Cleaned and formatted a 1500-row CSV file. Verified data types and constraints for analysis.</p>
+        <a href="#">Download Report</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🌐 Portfolio Website</h3>
+        <p>Designed and coded this portfolio using HTML/CSS. Focused on layout, centering, and responsive design.</p>
+        <a href="#">Visit Site</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Essme</p>
+  </footer>
+</body>
+</html>

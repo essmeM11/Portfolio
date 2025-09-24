@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:leap2="http://terms.leapspecs.org/" xmlns:categories="http://wiki.leapspecs.org/2A/categories" xmlns:portfolio="https://learn.thinkemployment.com/portfolio/export/leap2a/10752/1758744554"><id>https://learn.thinkemployment.com/portfolio/export/leap2a/10752/1758744554</id><title>Leap2A export from Moodle for Essme El Hadjam</title><leap2:version>http://www.leapspecs.org/2010-07/2A/</leap2:version><generator uri="https://learn.thinkemployment.com" version="2021051707.02">Moodle</generator><author><name>Essme El Hadjam</name><email>jemai.essme@gmail.com</email><uri>https://learn.thinkemployment.com/user/view.php?id=10752</uri></author><entry><id>portfolio:submissions_onlinetext7676</id><title>Assignment: Unit 3 - Q4 -Perform predictive data analytics based on a dataset using algorithms and analyse the outcome of data findings</title><content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>I created a database with 1000 rows and 8 columns regarding family incomes and their composition, to make a prediction about annual expenses based on collected characteristics, such as family, system, and monthly expenses etc.<img src="@@PLUGINFILE@@/table%20revenus.png" alt="" width="868" height="542"/></p>
+<p> </p>
+<p>I formatted the database by clearly specifying which fields are numeric. Then I worked on Python.</p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/phyton%201.png" alt="" width="816" height="579"/></p>
+<p>I imported the data.</p>
+<p>I added a new column, Annual expense, because it's the value I want to predict with my model. My data had monthly expenses, but I want to understand the total yearly expenses, so I multiplied the monthly expenses by 12 to get the annual amount. This way, I can use the other information, like family size, income, and status, to predict the annual expense. The annual expense column is the target variable that my model tries to learn and predict.</p>
+<p><img src="@@PLUGINFILE@@/ajout%20de%20colonne%20%20Python2.png" alt="" width="328" height="72"/></p>
+<p> </p>
+<p>I used pd.get_dummies() to convert categorical columns into numerical values. Then, Icreated a new variable x containing all the explanatory variables.</p>
+<p> </p>
+<address><em>df_encoded = pd.get_dummies(df, columns=['City', 'Degree', 'Professionnal statut'])</em></address><address><br/><em>X = df_encoded.drop(columns=['Annual expense', 'Monthly-expense', 'id']) </em><br/><em>y = df_encoded['Annual expense']</em></address>
+<p>I split the variable and asked for a test on 20% of my data, I used  RandomForestRegressor as an algorithm to predict. I used the trained model to predict the values of annual expenses.</p>
+<p> </p>
+<address><em># Variables</em><br/><em>X = df.drop(columns=['Annual expense'])</em><br/><em>y = df['Annual expense']</em></address><address><em># Split</em><br/><em>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)</em></address><address><em># Modèle</em><br/><em>model = RandomForestRegressor(random_state=42)</em><br/><em>model.fit(X_train, y_train)</em></address><address><em># Prédictions</em><br/><em>y_pred = model.predict(X_test)</em></address><address><em># Évaluation</em><br/><em>mse = mean_squared_error(y_test, y_pred)</em><br/><em>r2 = r2_score(y_test, y_pred)</em></address><address><em>print("MSE :", mse)</em><br/><em>print("R² :", r2)</em></address>
+<p>MSE measures how far the model's predictions are from the real values. And R2 tells how well the model explains the variability of the target variable.</p>
+<p> </p>
+<p>Now I can predict the annual expenses of other families by entering the number of people, monthly expenses and income like this:</p>
+<p> </p>
+<p><br/>X_new = pd.DataFrame({<br/> 'Family-size': [4],<br/> 'number of children': [2],<br/> 'Monthly-expense': [2000],<br/> 'Monthly-income': [3500]<br/>})</p>
+<p><br/>predicted_annual_expense = model.predict(X_new)</p>
+<p>print(f"Dépense annuelle estimée : {predicted_annual_expense[0]:.2f}")</p>
+<p><img src="@@PLUGINFILE@@/python%203.png" alt="" width="923" height="690"/></p>
+<p> </p></div></content><rdf:type rdf:resource="leap2:resource"/><category term="web" scheme="categories:resource_type#"/></entry></feed>

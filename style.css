@@ -224,3 +224,17 @@ footer {
   padding: 20px;
   font-size: 0.9em;
 }
+.contact-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #005fa3;
+}

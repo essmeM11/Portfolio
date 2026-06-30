@@ -3,114 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects – Essme Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Projects — Essme El Hadjam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>My Projects</h1>
+    <div class="brand-row">
+      <h1>Projects</h1>
+      <div class="identity-tags">DATA ANALYST <span class="sep">×</span> APP CREATOR</div>
+    </div>
     <nav class="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="projects">
+    <section class="projects-header">
       <h2>Featured Projects</h2>
+      <p>Dashboards that uncover insights, and an app that puts them to work.</p>
 
-      <div class="project-card">
-        <h3>📊 Power BI – Apple's revenue</h3>
-        <p>For this project, I started by collecting Apple’s revenue dataset from bullfincher.io. I cleaned and transformed the data to make it usable in Power BI, ensuring consistency across regions and fiscal years. Then, I designed an interactive dashboard to visualise Apple’s revenue distribution across the Americas, Europe, Greater China, Japan, and Asia-Pacific (excluding Japan) for the years 2022, 2023, and 2024.
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="app">App Development</button>
+        <button class="filter-btn" data-filter="data">Data Analysis</button>
+      </div>
+    </section>
 
-To highlight different insights, I used a combination of visuals: a bar chart for comparing regional market shares, a donut chart for a snapshot of one year, stacked columns and line charts to analyse trends over time, and slicers to filter by year or region. I also created a filled map with pie chart markers to connect the data to geography and make the results easier to interpret.
+    <section class="projects-grid" style="padding-top:0;">
 
-Through this dashboard, I was able to identify clear business insights: the Americas remain Apple’s largest market but show a slight decline, Europe demonstrates steady growth, and Greater China shows a consistent decrease that requires deeper investigation. Based on this, I suggested increasing marketing investments in Europe, reassessing the strategy in the Americas, and lowering the growth forecast for Greater China.
+      <div class="project-card" data-category="app">
+        <div class="card-tags"><span class="tag tag-app">App Development</span></div>
+        <h3>📱 ThinkBefore — Spend with intention</h3>
+        <p>A web app that fights impulse buying by converting any price into the number of work hours it actually costs you. Enter a price and your monthly income, and ThinkBefore shows the real cost in time — turning a quick purchase into a conscious decision.
 
-This project demonstrates key data analyst skills such as data cleaning and transformation, dashboard design in Power BI, use of different visualisation techniques for comparative and trend analysis, and the ability to interpret data into actionable business recommendations..</p>
-   
-        <img src="apple_dashboard.png" alt="Apple Revenue Dashboard" class="project-image" />
-
-        <a href="apple_dashboard.png" download>View Dashboard</a>
-        
-        <img src="apple maps.png" alt="apple maps" class="project-image" />
-
-        <a href="apple maps.png" download>View Dashboard</a>
-      
-
-
-
+Built and shipped end-to-end: pricing tiers, a 48h wishlist to let urges fade, monthly spending charts, a goal tracker, CSV export, and a companion Chrome extension that surfaces the calculator while shopping online. Launched on Product Hunt and the Chrome Web Store.</p>
+        <div class="card-links">
+          <a href="https://thinkbefore.web.app" target="_blank">Try the app →</a>
+        </div>
       </div>
 
-       <div class="project-card">
-        <h3>📊 Power BI – Business Performance Summary </h3>
-        <p>
+      <div class="project-card" data-category="data">
+        <div class="card-tags"><span class="tag tag-data">Data Analysis</span></div>
+        <h3>📊 Power BI — Apple's revenue</h3>
+        <p>Collected Apple's revenue dataset from bullfincher.io, cleaned and transformed it for consistency across regions and fiscal years, then designed an interactive dashboard visualising revenue distribution across the Americas, Europe, Greater China, Japan and Asia-Pacific for 2022–2024.
 
-          This interactive dashboard provides a comprehensive analysis of product performance by flavour in the UK market. It highlights key metrics such as units sold, gross revenue, and unit cost through clear and strategic visualizations. Built with Power BI, this project showcases my ability to turn complex data into actionable insights, while demonstrating skills in data visualization, storytelling, and business-oriented analysis.
-        <img src="dashboard_drinks.png3.png" alt="Apple Revenue Dashboard" class="project-image" />
-
-        <a href="dashboard_drinks.png3.png" download>View Dashboard</a>
-        
-     <h3>📊 Battery Inventory Dashboard
-     </h3>   
- <p>     
-I created an interactive dashboard titled Battery Inventory to visualize key metrics related to battery sales and stock levels. The dashboard provides a clear overview of total sales, available stock, quantity sold, and the number of battery models tracked. It includes a pie chart showing the distribution of sales by model (AA, C, D, and 9V), as well as two line charts that display monthly sales trends—one overall and one broken down by model. This project highlights my ability to design clean, informative visualizations and analyze time-based performance data in a commercial context.
-</p>
-
-<img src="visualisation1.png" alt="Predictive Data" class="project-image" />
-
-
-         
+Used bar charts for regional comparison, a donut chart for yearly snapshots, stacked columns and line charts for trend analysis, and a filled map with pie markers to connect data to geography. Findings: the Americas remain the largest market but show slight decline, Europe shows steady growth, and Greater China shows a consistent decrease worth investigating — leading to recommendations on marketing investment and growth forecasting.</p>
+        <div class="project-images">
+          <img src="apple_dashboard.png" alt="Apple Revenue Dashboard" class="project-image" />
+          <img src="apple maps.png" alt="Apple revenue map" class="project-image" />
+        </div>
+        <div class="card-links">
+          <a href="apple_dashboard.png" download>View dashboard</a>
+          <a href="apple maps.png" download>View map</a>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3>🧼 Phyton –Predictive data analytics</h3>
-       <p> Perform predictive data analytics based on a dataset using algorithms and analyse the outcome of data findings. </p>
-
- 
-      <img src="phyton 1.png" alt="Predictive Data" class="project-image" />
- <img src="phyton 1.png" alt="Predictive Data" class="project-image" />
- <img src="Phyton2.png" alt="Predictive Data" class="project-image" />
- <img src="Phyton3.png" alt="Predictive Data" class="project-image" />
-  <img src="phyton4.png" alt="Predictive Data" class="project-image" />
- <img src="phyton5.png" alt="Predictive Data" class="project-image" />
-
-
-
-        
-        
+      <div class="project-card" data-category="data">
+        <div class="card-tags"><span class="tag tag-data">Data Analysis</span></div>
+        <h3>📊 Power BI — Business Performance Summary</h3>
+        <p>An interactive dashboard analysing product performance by flavour in the UK market, highlighting units sold, gross revenue and unit cost through clear, strategic visualisations — turning complex data into actionable business insights.</p>
+        <div class="project-images">
+          <img src="dashboard_drinks.png3.png" alt="Business Performance Dashboard" class="project-image" />
+        </div>
+        <div class="card-links">
+          <a href="dashboard_drinks.png3.png" download>View dashboard</a>
+        </div>
       </div>
 
-<div class="project-card">
-        <h3>🧼 SQL project presentation</h3>
-       <p> I developed a relational database called StudentRecords to simulate a real-world academic system. This project allowed me to apply SQL fundamentals to structure and manage student and course information in a scalable and coherent way. I began by creating the database and defining two core tables: one for students and one for courses. The Student table includes personal and demographic details such as ID, name, address, age, gender, and location, while the Course table stores course identifiers, names, and locations.
-
-To ensure data integrity, I implemented a primary key on the student ID and planned a foreign key to link each student to a course. Although the foreign key constraint required adjustment in the script, identifying and correcting this issue was part of the learning process. I inserted sample data into both tables, including two courses and one student enrolled in one of them, which helped validate the structure and relationships within the database.
-
-This project demonstrates my understanding of relational modeling, my attention to detail in defining constraints, and my ability to troubleshoot and refine SQL scripts. It marks an important step in my progression toward advanced data analytics, and reflects my commitment to building reliable systems that support meaningful insights. I plan to expand this work by normalizing the schema further, writing JOIN queries to extract cross-table information, and integrating the database with tools like Python or Power BI for visualization and reporting. </p>
-  <img src="SQL.png" alt="Predictive Data" class="project-image" />
-    
-        
+      <div class="project-card" data-category="data">
+        <div class="card-tags"><span class="tag tag-data">Data Analysis</span></div>
+        <h3>📊 Battery Inventory Dashboard</h3>
+        <p>An interactive dashboard visualising battery sales and stock levels: total sales, available stock, quantity sold, and number of models tracked. Includes a pie chart of sales distribution by model (AA, C, D, 9V) and two line charts of monthly sales trends, overall and by model.</p>
+        <div class="project-images">
+          <img src="visualisation1.png" alt="Battery Inventory Dashboard" class="project-image" />
+        </div>
       </div>
 
-
-
-
-
-      
-      <div class="project-card">
-        <h3>🌐 Portfolio Website</h3>
-        <p>Designed and coded this portfolio using HTML/CSS. Focused on layout, centering, and responsive design.</p>
-        <a href="#">Visit Site</a>
+      <div class="project-card" data-category="data">
+        <div class="card-tags"><span class="tag tag-data">Data Analysis</span></div>
+        <h3>🐍 Python — Predictive data analytics</h3>
+        <p>Predictive data analytics on a dataset using algorithms to analyse and interpret the findings.</p>
+        <div class="project-images">
+          <img src="phyton 1.png" alt="Python predictive analytics" class="project-image" />
+          <img src="Phyton2.png" alt="Python predictive analytics" class="project-image" />
+          <img src="Phyton3.png" alt="Python predictive analytics" class="project-image" />
+          <img src="phyton4.png" alt="Python predictive analytics" class="project-image" />
+          <img src="phyton5.png" alt="Python predictive analytics" class="project-image" />
+        </div>
       </div>
+
+      <div class="project-card" data-category="data">
+        <div class="card-tags"><span class="tag tag-data">Data Analysis</span></div>
+        <h3>🗄️ SQL — StudentRecords database</h3>
+        <p>Developed a relational database simulating a real-world academic system: a Student table (ID, name, address, age, gender, location) and a Course table, linked with a primary key on student ID and a planned foreign key relationship.
+
+Demonstrates relational modelling, attention to constraints, and the ability to troubleshoot and refine SQL scripts. Next steps: normalising the schema further, writing JOIN queries, and integrating with Python or Power BI for reporting.</p>
+        <div class="project-images">
+          <img src="SQL.png" alt="SQL StudentRecords project" class="project-image" />
+        </div>
+      </div>
+
+      <div class="project-card" data-category="app">
+        <div class="card-tags"><span class="tag tag-app">App Development</span></div>
+        <h3>🌐 This portfolio</h3>
+        <p>Designed and coded with HTML/CSS, structured around a single identity that spans data analysis and app development — including a filterable project grid like the one you're looking at.</p>
+      </div>
+
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Essme</p>
+    <p>&copy; 2025 Essme El Hadjam</p>
   </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

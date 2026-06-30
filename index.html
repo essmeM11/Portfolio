@@ -3,29 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
+    <title>Essme El Hadjam — Data Analyst & App Creator</title>
+    <meta name="description" content="Portfolio of Essme El Hadjam — Data Analyst and App Creator. Power BI, SQL, Python and the ThinkBefore app.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <div class="brand-row">
+            <h1>Essme El Hadjam</h1>
+            <div class="identity-tags">DATA ANALYST <span class="sep">×</span> APP CREATOR</div>
+        </div>
         <nav class="menu">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
-        <section>
-            
-            <p>Hello! I’m Essme. Explore my projects and learn more about my background.</p>
+        <section class="hero">
+            <div class="hero-eyebrow">Portfolio — 2025</div>
+            <h2>I turn numbers into <em>decisions</em> — and decisions into <em>products</em>.</h2>
+            <p class="lede">I'm Essme: I analyse data to find what matters, and I build apps that help people act on it. Power BI dashboards on one side, a live app on the other.</p>
+            <div class="hero-cta">
+                <a href="projects.html" class="btn btn-primary">View projects</a>
+                <a href="https://thinkbefore.web.app" target="_blank" class="btn btn-ghost">Try ThinkBefore →</a>
+            </div>
+
+            <div class="dual-identity">
+                <div class="identity-col">
+                    <span class="tag tag-data">Data Analysis</span>
+                    <h3>Dashboards that drive decisions</h3>
+                    <p>Power BI, SQL and Python projects — from raw datasets to clear business recommendations, like the Apple revenue and Battery Inventory dashboards.</p>
+                </div>
+                <div class="identity-col">
+                    <span class="tag tag-app">App Development</span>
+                    <h3>ThinkBefore — spend with intention</h3>
+                    <p>A live web app that converts any price into work hours, so people pause before impulse purchases. Built, shipped, and launched on Product Hunt.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Essme</p>
+        <p>&copy; 2025 Essme El Hadjam</p>
     </footer>
 </body>
 </html>

@@ -7,6 +7,135 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* ---- About extras ---- */
+      .about-hero {
+        padding: 56px 0 40px;
+        border-bottom: 1px solid var(--line);
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .about-hero img {
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+      }
+      .about-hero h2 {
+        font-family: var(--font-display);
+        font-size: clamp(28px, 4vw, 42px);
+        line-height: 1.15;
+        margin: 0 0 16px;
+      }
+      .about-hero h2 em { font-style: italic; color: var(--amber-deep); }
+      .about-hero p { color: var(--ink-soft); font-size: 17px; margin: 0 0 24px; max-width: 560px; }
+
+      /* Services grid */
+      .services-section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+      .services-section h3 {
+        font-family: var(--font-display);
+        font-size: 26px;
+        margin: 0 0 8px;
+      }
+      .services-section > p { color: var(--ink-soft); margin: 0 0 36px; }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .service-card {
+        background: var(--paper-raised);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 28px;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      .service-card:hover {
+        border-color: var(--amber);
+        box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      }
+      .service-icon { font-size: 28px; margin-bottom: 14px; }
+      .service-card h4 {
+        font-family: var(--font-display);
+        font-size: 18px;
+        margin: 0 0 10px;
+      }
+      .service-card p { color: var(--ink-soft); font-size: 14px; margin: 0 0 16px; }
+      .service-deliverables {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-top: 1px dashed var(--line);
+        padding-top: 14px;
+      }
+      .service-deliverables li {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--ink-soft);
+        padding: 4px 0;
+      }
+      .service-deliverables li::before { content: "→ "; color: var(--amber); }
+
+      /* Why me */
+      .why-section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+      .why-section h3 { font-family: var(--font-display); font-size: 26px; margin: 0 0 28px; }
+      .why-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+      .why-card {
+        padding: 24px;
+        border-left: 3px solid var(--amber);
+        background: var(--paper-raised);
+      }
+      .why-card strong { display: block; font-size: 15px; margin-bottom: 6px; }
+      .why-card p { color: var(--ink-soft); font-size: 14px; margin: 0; }
+
+      /* Credentials strip */
+      .cred-section { padding: 48px 0; }
+      .cred-section h3 { font-family: var(--font-display); font-size: 22px; margin: 0 0 24px; }
+
+      /* CTA banner */
+      .cta-banner {
+        background: var(--ink);
+        color: var(--paper);
+        border-radius: 10px;
+        padding: 40px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin: 0 0 48px;
+      }
+      .cta-banner h4 {
+        font-family: var(--font-display);
+        font-size: 24px;
+        margin: 0 0 8px;
+      }
+      .cta-banner p { color: rgba(247,244,236,0.6); margin: 0; font-size: 15px; }
+      .cta-banner .btn-amber {
+        background: var(--amber);
+        color: var(--ink);
+        border: none;
+        padding: 14px 28px;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 14px;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.2s;
+      }
+      .cta-banner .btn-amber:hover { background: var(--amber-deep); color: var(--paper); }
+
+      @media (max-width: 640px) {
+        .about-hero { grid-template-columns: 1fr; }
+        .about-hero img { max-width: 140px; }
+        .services-grid, .why-grid { grid-template-columns: 1fr; }
+        .cta-banner { flex-direction: column; padding: 28px; }
+      }
+    </style>
 </head>
 <body>
     <header>
@@ -21,27 +150,116 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <main>
-        <section class="about-container">
-            <div class="about-image">
-                <img src="profilphoto.png" alt="Essme El Hadjam">
-            </div>
-            <div class="about-text">
-                <h2>Hello, I'm Essme</h2>
-                <p>I work at the intersection of analysis and creation. As a data analyst, I clean, model and visualise data to surface insights that drive real business decisions. As an app creator, I take that same instinct for clarity and ship it directly to users — most recently with ThinkBefore, a web app that helps people think before they spend.</p>
-                <p>My academic path is unconventional and that's exactly what shapes how I work: a Level 3 certification in Data Analysis, a Bachelor's degree in Accounting, and a License in Arabic and Hebrew Literature. Numbers, structure and language — three different disciplines that all come down to the same skill: making complex things easy to understand.</p>
-                <p>In my free time, I read, explore new cultures, and keep experimenting with tech projects that push me to learn something new.</p>
 
-                <div class="credentials">
-                    <div class="credential-row"><span class="label">Education</span><span>Level 3 — Data Analysis</span></div>
-                    <div class="credential-row"><span class="label">Education</span><span>BA — Accounting</span></div>
-                    <div class="credential-row"><span class="label">Education</span><span>License — Arabic & Hebrew Literature</span></div>
-                    <div class="credential-row"><span class="label">Tools</span><span>Power BI, SQL, Python, Excel</span></div>
-                    <div class="credential-row"><span class="label">Shipped</span><span>ThinkBefore — thinkbefore.web.app</span></div>
-                </div>
-            </div>
-        </section>
+    <main>
+
+      <!-- HERO -->
+      <section class="about-hero">
+        <img src="profilphoto.png" alt="Essme El Hadjam">
+        <div>
+          <h2>I analyse data.<br>I build apps.<br><em>I do both for your business.</em></h2>
+          <p>I'm Essme — a freelance Data Analyst and App Creator based in Manchester. I help businesses and solo founders make sense of their data and ship digital products that actually work. My edge? I understand both sides: the numbers and the user.</p>
+          <a href="contact.html" class="btn btn-primary">Work with me →</a>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="services-section">
+        <h3>What I can build for you</h3>
+        <p>Two specialities, one freelancer — less briefing, more delivery.</p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">📊</div>
+            <h4>Data Analysis & Dashboards</h4>
+            <p>I turn your raw data into clear, interactive dashboards that help you make faster, smarter decisions. No more spreadsheet chaos.</p>
+            <ul class="service-deliverables">
+              <li>Power BI interactive dashboards</li>
+              <li>SQL data modelling & cleaning</li>
+              <li>Python data analysis & reporting</li>
+              <li>Business KPI tracking</li>
+              <li>Presentation-ready insights</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h4>Custom App Development</h4>
+            <p>I design and build web apps tailored to your specific need — from MVP to a live, shipped product that real users can open today.</p>
+            <ul class="service-deliverables">
+              <li>Web app — idea to launch</li>
+              <li>Flutter mobile apps</li>
+              <li>Chrome extensions</li>
+              <li>UX-first product design</li>
+              <li>Product Hunt launch support</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🔗</div>
+            <h4>Data × App — Combined</h4>
+            <p>Need both? I can analyse your data and build the tool that uses it — a dashboard inside your app, an automated report, or a data-driven product feature.</p>
+            <ul class="service-deliverables">
+              <li>Data-driven app features</li>
+              <li>Automated reporting tools</li>
+              <li>Analytics integration</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🚀</div>
+            <h4>MVP — Fast & Focused</h4>
+            <p>Got an idea but no budget for a big agency? I build lean, focused MVPs that validate your concept quickly and cleanly.</p>
+            <ul class="service-deliverables">
+              <li>Scoped to what matters first</li>
+              <li>Shipped in weeks, not months</li>
+              <li>Real users, real feedback</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY ME -->
+      <section class="why-section">
+        <h3>Why work with me?</h3>
+        <div class="why-grid">
+          <div class="why-card">
+            <strong>Analyst brain, builder hands</strong>
+            <p>I don't just report findings — I can build the product that acts on them. Rare combination, real advantage for your project.</p>
+          </div>
+          <div class="why-card">
+            <strong>Proof of concept, live</strong>
+            <p>ThinkBefore is a live app, on the Chrome Web Store, launched on Product Hunt. I ship things. Not just mockups.</p>
+          </div>
+          <div class="why-card">
+            <strong>Solo = fast & direct</strong>
+            <p>No account manager, no handover delays. You work with me directly from brief to delivery — clear communication, fast turnaround.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CREDENTIALS -->
+      <section class="cred-section">
+        <h3>Background & tools</h3>
+        <div class="credentials">
+          <div class="credential-row"><span class="label">Shipped</span><span>ThinkBefore — live web app + Chrome extension</span></div>
+          <div class="credential-row"><span class="label">Tools</span><span>Power BI · SQL · Python · Flutter · Excel</span></div>
+          <div class="credential-row"><span class="label">Education</span><span>Level 3 Data Analysis · BA Accounting · License Arabic & Hebrew Lit.</span></div>
+          <div class="credential-row"><span class="label">Based in</span><span>Manchester, United Kingdom — available remotely worldwide</span></div>
+        </div>
+      </section>
+
+      <!-- CTA BANNER -->
+      <div class="cta-banner">
+        <div>
+          <h4>Ready to start a project?</h4>
+          <p>Tell me what you need — dashboard, app, or both. I'll get back within 24h.</p>
+        </div>
+        <a href="contact.html" class="btn-amber">Get in touch →</a>
+      </div>
+
     </main>
+
     <footer>
         <p>&copy; 2025 Essme El Hadjam</p>
     </footer>

@@ -4,10 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Essme El Hadjam — Data Analyst & App Creator</title>
-    <meta name="description" content="Portfolio of Essme El Hadjam — Data Analyst and App Creator. Power BI, SQL, Python and the ThinkBefore app.">
+    <meta name="description" content="Freelance Data Analyst and App Creator. Power BI dashboards, custom web apps, Flutter — Manchester, UK.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* ---- Home extras ---- */
+      .hire-strip {
+        background: var(--amber-soft);
+        border: 1px solid #e8c99a;
+        border-radius: 8px;
+        padding: 20px 28px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+      .hire-dot {
+        width: 10px; height: 10px;
+        background: #3daa6e;
+        border-radius: 50%;
+        flex-shrink: 0;
+        box-shadow: 0 0 0 3px rgba(61,170,110,0.25);
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { box-shadow: 0 0 0 3px rgba(61,170,110,0.25); }
+        50% { box-shadow: 0 0 0 6px rgba(61,170,110,0.1); }
+      }
+      .hire-strip p { margin: 0; font-size: 15px; color: var(--ink); }
+      .hire-strip p strong { color: var(--amber-deep); }
+      .hire-strip a {
+        margin-left: auto;
+        font-weight: 700;
+        font-size: 13px;
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 2px solid var(--amber);
+        padding-bottom: 2px;
+        white-space: nowrap;
+      }
+      .hire-strip a:hover { color: var(--amber-deep); }
+
+      /* Social proof / stats */
+      .stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 48px 0 0;
+      }
+      .stat-cell {
+        background: var(--paper-raised);
+        padding: 28px 24px;
+        text-align: center;
+      }
+      .stat-number {
+        font-family: var(--font-display);
+        font-size: 36px;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .stat-label {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--ink-soft);
+      }
+
+      /* Services preview */
+      .services-preview {
+        padding: 56px 0 0;
+        border-top: 1px solid var(--line);
+      }
+      .services-preview h3 {
+        font-family: var(--font-display);
+        font-size: 26px;
+        margin: 0 0 6px;
+      }
+      .services-preview > p { color: var(--ink-soft); margin: 0 0 32px; }
+
+      .service-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .service-mini {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 24px;
+        background: var(--paper-raised);
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      .service-mini:hover {
+        border-color: var(--amber);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      }
+      .service-mini .icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+      .service-mini h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px; }
+      .service-mini p { color: var(--ink-soft); font-size: 13px; margin: 0; }
+
+      .section-cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 0 56px;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .section-cta p { color: var(--ink-soft); margin: 0; }
+
+      @media (max-width: 640px) {
+        .stats-row { grid-template-columns: 1fr; }
+        .service-row { grid-template-columns: 1fr; }
+        .hire-strip a { margin-left: 0; }
+      }
+    </style>
 </head>
 <body>
     <header>
@@ -22,32 +145,110 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <main>
-        <section class="hero">
-            <div class="hero-eyebrow">Portfolio — 2025</div>
-            <h2>I turn numbers into <em>decisions</em> — and decisions into <em>products</em>.</h2>
-            <p class="lede">I'm Essme: I analyse data to find what matters, and I build apps that help people act on it. Power BI dashboards on one side, a live app on the other.</p>
-            <div class="hero-cta">
-                <a href="projects.html" class="btn btn-primary">View projects</a>
-                <a href="https://thinkbefore.web.app" target="_blank" class="btn btn-ghost">Try ThinkBefore →</a>
-            </div>
 
-            <div class="dual-identity">
-                <div class="identity-col">
-                    <span class="tag tag-data">Data Analysis</span>
-                    <h3>Dashboards that drive decisions</h3>
-                    <p>Power BI, SQL and Python projects — from raw datasets to clear business recommendations, like the Apple revenue and Battery Inventory dashboards.</p>
-                </div>
-                <div class="identity-col">
-                    <span class="tag tag-app">App Development</span>
-                    <h3>ThinkBefore — spend with intention</h3>
-                    <p>A live web app that converts any price into work hours, so people pause before impulse purchases. Built, shipped, and launched on Product Hunt.</p>
-                </div>
+    <main>
+      <section class="hero">
+        <div class="hero-eyebrow">Freelance · Manchester, UK · Available remotely</div>
+        <h2>I turn numbers into <em>decisions</em> — and decisions into <em>products</em>.</h2>
+        <p class="lede">I'm Essme: freelance Data Analyst and App Creator. I help businesses make sense of their data and build digital tools that actually ship. Power BI dashboards on one side, a live app on the other.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-primary">Hire me →</a>
+          <a href="projects.html" class="btn btn-ghost">See my work</a>
+        </div>
+
+        <!-- Availability strip -->
+        <div class="hire-strip">
+          <div class="hire-dot"></div>
+          <p><strong>Available for freelance projects</strong> — dashboards, apps, MVPs. Usually respond within 24h.</p>
+          <a href="contact.html">Let's talk →</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+          <div class="stat-cell">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Live app shipped</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Data projects</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Specialities, 1 hire</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES PREVIEW -->
+      <section class="services-preview">
+        <h3>What I can do for you</h3>
+        <p>Two freelance specialities, one point of contact.</p>
+
+        <div class="service-row">
+          <div class="service-mini">
+            <div class="icon">📊</div>
+            <div>
+              <h4>Data Analysis & Dashboards</h4>
+              <p>Power BI, SQL, Python — I turn raw data into clear, interactive dashboards that drive real decisions.</p>
             </div>
-        </section>
+          </div>
+          <div class="service-mini">
+            <div class="icon">📱</div>
+            <div>
+              <h4>Custom App Development</h4>
+              <p>Web apps and mobile apps built from scratch — from concept to a live, shipped product your users can open today.</p>
+            </div>
+          </div>
+          <div class="service-mini">
+            <div class="icon">🔗</div>
+            <div>
+              <h4>Data × App — Combined</h4>
+              <p>I can analyse your data and build the tool that uses it — a rare, efficient combo under one roof.</p>
+            </div>
+          </div>
+          <div class="service-mini">
+            <div class="icon">🚀</div>
+            <div>
+              <h4>MVP — Fast & Focused</h4>
+              <p>Got an idea? I scope, build and ship a lean MVP in weeks — so you validate before you invest big.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <p>Full service details, proof of work and why clients choose me →</p>
+          <a href="about.html" class="btn btn-primary">About & services</a>
+        </div>
+      </section>
+
+      <!-- IDENTITY LEDGER -->
+      <section style="padding: 0 0 56px; border-top: 1px solid var(--line);">
+        <div style="padding-top: 40px; margin-bottom: 24px;">
+          <p style="font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--teal); margin: 0 0 8px;">Recent work</p>
+          <h3 style="font-family: var(--font-display); font-size: 24px; margin: 0;">Two sides, one portfolio</h3>
+        </div>
+        <div class="dual-identity">
+          <div class="identity-col">
+            <span class="tag tag-data">Data Analysis</span>
+            <h3>Dashboards that drive decisions</h3>
+            <p>Power BI, SQL and Python projects — from raw datasets to clear business recommendations. Apple revenue, inventory management, predictive analytics and more.</p>
+          </div>
+          <div class="identity-col">
+            <span class="tag tag-app">App Development</span>
+            <h3>ThinkBefore — spend with intention</h3>
+            <p>A live web app that converts any price into work hours. Built, shipped, Chrome extension published, launched on Product Hunt. A real product, for real users.</p>
+          </div>
+        </div>
+        <div style="text-align:center; padding-top: 28px;">
+          <a href="projects.html" class="btn btn-ghost">View all projects →</a>
+        </div>
+      </section>
+
     </main>
+
     <footer>
-        <p>&copy; 2025 Essme El Hadjam</p>
+        <p>&copy; 2025 Essme El Hadjam — Freelance Data Analyst & App Creator · Manchester, UK</p>
     </footer>
 </body>
 </html>

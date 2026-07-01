@@ -4,10 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact — Essme El Hadjam</title>
+    <meta name="description" content="Get in touch with Essme El Hadjam for freelance data analysis or app development projects.">
+    <meta property="og:title" content="Contact — Essme El Hadjam">
+    <meta property="og:url" content="https://essmem11.github.io/Portfolio/contact.html">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        padding: 48px 0;
+      }
+      .contact-left h2 { font-family: var(--font-display); font-size: 32px; margin: 0 0 12px; }
+      .contact-left p { color: var(--ink-soft); margin: 0 0 28px; font-size: 16px; }
+
+      .contact-links { list-style: none; padding: 0; margin: 0 0 32px; }
+      .contact-links li {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 0;
+        border-bottom: 1px dashed var(--line);
+        font-size: 15px;
+      }
+      .contact-links li .link-icon {
+        font-size: 20px;
+        width: 32px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      .contact-links li a { color: var(--teal); text-decoration: none; word-break: break-all; }
+      .contact-links li a:hover { color: var(--amber-deep); }
+
+      .contact-right {
+        background: var(--paper-raised);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 32px;
+      }
+      .contact-right h3 { font-family: var(--font-display); font-size: 22px; margin: 0 0 8px; }
+      .contact-right p { color: var(--ink-soft); font-size: 14px; margin: 0 0 24px; }
+
+      .process-steps { list-style: none; padding: 0; margin: 0; }
+      .process-steps li {
+        display: flex;
+        gap: 14px;
+        padding: 14px 0;
+        border-bottom: 1px dashed var(--line);
+        font-size: 14px;
+        color: var(--ink-soft);
+      }
+      .process-steps li:last-child { border-bottom: none; }
+      .step-num {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--amber);
+        background: var(--amber-soft);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .linkedin-cta {
+        background: #0a66c2;
+        color: white;
+        padding: 14px 24px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 8px;
+        transition: background 0.2s;
+      }
+      .linkedin-cta:hover { background: #004182; }
+
+      @media (max-width: 640px) {
+        .contact-grid { grid-template-columns: 1fr; }
+      }
+    </style>
 </head>
 <body>
     <header>
@@ -23,21 +108,58 @@
         </nav>
     </header>
     <main>
-        <section id="contact">
-            <h2>📬 Get in touch</h2>
-            <p>Reach out for collaboration, freelance work, or feedback on any project — Power BI dashboards or ThinkBefore.</p>
-            <ul>
-                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:essme786@gmail.com">essme786@gmail.com</a></li>
-                <li><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/essme-el-hadjam/" target="_blank">linkedin.com/in/essme-el-hadjam</a></li>
-                <li><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="https://essmem11.github.io/Portfolio/" target="_blank">essmem11.github.io/Portfolio</a></li>
-                <li><i class="fas fa-mobile-screen"></i> <strong>App:</strong> <a href="https://thinkbefore.web.app" target="_blank">thinkbefore.web.app</a></li>
-                <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Manchester, United Kingdom</li>
-            </ul>
-            <a href="mailto:essme786@gmail.com" class="contact-button">Send me an email</a>
-        </section>
+      <div class="contact-grid">
+
+        <div class="contact-left">
+          <h2>Let's work together</h2>
+          <p>Looking for a freelance data analyst, an app developer, or both? Tell me about your project — I'll get back to you within 24 hours.</p>
+
+          <ul class="contact-links">
+            <li>
+              <span class="link-icon">✉️</span>
+              <div><strong>Email</strong><br><a href="mailto:essme786@gmail.com">essme786@gmail.com</a></div>
+            </li>
+            <li>
+              <span class="link-icon">💼</span>
+              <div><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/essme-el-hadjam/" target="_blank">linkedin.com/in/essme-el-hadjam</a></div>
+            </li>
+            <li>
+              <span class="link-icon">🐙</span>
+              <div><strong>GitHub</strong><br><a href="https://github.com/essmem11" target="_blank">github.com/essmem11</a></div>
+            </li>
+            <li>
+              <span class="link-icon">📱</span>
+              <div><strong>ThinkBefore App</strong><br><a href="https://thinkbefore.web.app" target="_blank">thinkbefore.web.app</a></div>
+            </li>
+            <li>
+              <span class="link-icon">📍</span>
+              <div><strong>Location</strong><br>Manchester, UK — available remotely worldwide</div>
+            </li>
+          </ul>
+
+          <a href="mailto:essme786@gmail.com" class="contact-button">Send an email →</a>
+          <br>
+          <a href="https://www.linkedin.com/in/essme-el-hadjam/" target="_blank" class="linkedin-cta">
+            💼 Connect on LinkedIn
+          </a>
+        </div>
+
+        <div class="contact-right">
+          <h3>How it works</h3>
+          <p>Simple, direct process — no agency overhead.</p>
+          <ul class="process-steps">
+            <li><span class="step-num">1</span><span><strong>You reach out</strong> — email or LinkedIn, describe your project in a few lines.</span></li>
+            <li><span class="step-num">2</span><span><strong>Quick call</strong> — 20 min to understand your needs, timeline and budget.</span></li>
+            <li><span class="step-num">3</span><span><strong>Proposal</strong> — I send a clear scope and quote within 48h.</span></li>
+            <li><span class="step-num">4</span><span><strong>We build</strong> — regular updates, direct communication, no surprises.</span></li>
+            <li><span class="step-num">5</span><span><strong>Delivery</strong> — you get the final files, dashboard, or live product.</span></li>
+          </ul>
+        </div>
+
+      </div>
     </main>
     <footer>
-        <p>&copy; 2025 Essme El Hadjam</p>
+        <p>&copy; 2025 Essme El Hadjam — Freelance Data Analyst & App Creator · Manchester, UK</p>
     </footer>
 </body>
 </html>

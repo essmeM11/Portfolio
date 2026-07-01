@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essme El Hadjam — Data Analyst & App Creator</title>
-    <meta name="description" content="Freelance Data Analyst and App Creator. Power BI dashboards, custom web apps, Flutter — Manchester, UK.">
+    <title>Essme El Hadjam — Freelance Data Analyst & App Creator</title>
+    <meta name="description" content="Freelance Data Analyst and App Creator based in Manchester, UK. Power BI dashboards, custom web & mobile apps. Available for projects worldwide.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Essme El Hadjam — Data Analyst & App Creator">
+    <meta property="og:description" content="I turn data into decisions and decisions into products. Power BI dashboards, custom apps, MVPs — available for freelance projects.">
+    <meta property="og:url" content="https://essmem11.github.io/Portfolio/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://essmem11.github.io/Portfolio/profilphoto.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Essme El Hadjam — Data Analyst & App Creator">
+    <meta name="twitter:description" content="Freelance Data Analyst and App Creator. Power BI, SQL, Python, Flutter. Manchester, UK.">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-      /* ---- Home extras ---- */
       .hire-strip {
         background: var(--amber-soft);
         border: 1px solid #e8c99a;
@@ -47,7 +58,47 @@
       }
       .hire-strip a:hover { color: var(--amber-deep); }
 
-      /* Social proof / stats */
+      /* Hero profile row */
+      .hero-profile {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+        margin-bottom: 28px;
+      }
+      .hero-profile img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 3px solid var(--amber);
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+      .hero-profile-text { flex: 1; }
+      .hero-profile-text .hero-eyebrow { margin-bottom: 4px; }
+
+      /* Social links in hero */
+      .hero-social {
+        display: flex;
+        gap: 16px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+      .hero-social a {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--ink-soft);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 2px;
+        transition: color 0.15s, border-color 0.15s;
+      }
+      .hero-social a:hover { color: var(--teal); border-color: var(--teal); }
+
       .stats-row {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -58,45 +109,15 @@
         overflow: hidden;
         margin: 48px 0 0;
       }
-      .stat-cell {
-        background: var(--paper-raised);
-        padding: 28px 24px;
-        text-align: center;
-      }
-      .stat-number {
-        font-family: var(--font-display);
-        font-size: 36px;
-        font-weight: 600;
-        color: var(--ink);
-        line-height: 1;
-        margin-bottom: 6px;
-      }
-      .stat-label {
-        font-family: var(--font-mono);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--ink-soft);
-      }
+      .stat-cell { background: var(--paper-raised); padding: 28px 24px; text-align: center; }
+      .stat-number { font-family: var(--font-display); font-size: 36px; font-weight: 600; color: var(--ink); line-height: 1; margin-bottom: 6px; }
+      .stat-label { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-soft); }
 
-      /* Services preview */
-      .services-preview {
-        padding: 56px 0 0;
-        border-top: 1px solid var(--line);
-      }
-      .services-preview h3 {
-        font-family: var(--font-display);
-        font-size: 26px;
-        margin: 0 0 6px;
-      }
+      .services-preview { padding: 56px 0 0; border-top: 1px solid var(--line); }
+      .services-preview h3 { font-family: var(--font-display); font-size: 26px; margin: 0 0 6px; }
       .services-preview > p { color: var(--ink-soft); margin: 0 0 32px; }
 
-      .service-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        margin-bottom: 20px;
-      }
+      .service-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
       .service-mini {
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -107,28 +128,19 @@
         align-items: flex-start;
         transition: border-color 0.2s, box-shadow 0.2s;
       }
-      .service-mini:hover {
-        border-color: var(--amber);
-        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      }
+      .service-mini:hover { border-color: var(--amber); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
       .service-mini .icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
       .service-mini h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px; }
       .service-mini p { color: var(--ink-soft); font-size: 13px; margin: 0; }
 
-      .section-cta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 32px 0 56px;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
+      .section-cta { display: flex; justify-content: space-between; align-items: center; padding: 32px 0 56px; flex-wrap: wrap; gap: 16px; }
       .section-cta p { color: var(--ink-soft); margin: 0; }
 
       @media (max-width: 640px) {
         .stats-row { grid-template-columns: 1fr; }
         .service-row { grid-template-columns: 1fr; }
         .hire-strip a { margin-left: 0; }
+        .hero-profile { flex-direction: column; align-items: flex-start; }
       }
     </style>
 </head>
@@ -148,15 +160,33 @@
 
     <main>
       <section class="hero">
-        <div class="hero-eyebrow">Freelance · Manchester, UK · Available remotely</div>
+
+        <!-- Photo + eyebrow -->
+        <div class="hero-profile">
+          <img src="profilphoto.png" alt="Essme El Hadjam">
+          <div class="hero-profile-text">
+            <div class="hero-eyebrow">Freelance · Manchester, UK · Available remotely worldwide</div>
+          </div>
+        </div>
+
         <h2>I turn numbers into <em>decisions</em> — and decisions into <em>products</em>.</h2>
         <p class="lede">I'm Essme: freelance Data Analyst and App Creator. I help businesses make sense of their data and build digital tools that actually ship. Power BI dashboards on one side, a live app on the other.</p>
+
         <div class="hero-cta">
           <a href="contact.html" class="btn btn-primary">Hire me →</a>
+          <a href="https://thinkbefore.web.app" target="_blank" class="btn btn-ghost">Try ThinkBefore →</a>
           <a href="projects.html" class="btn btn-ghost">See my work</a>
         </div>
 
-        <!-- Availability strip -->
+        <!-- Social links -->
+        <div class="hero-social">
+          <a href="https://www.linkedin.com/in/essme-el-hadjam/" target="_blank">💼 LinkedIn</a>
+          <a href="https://github.com/essmem11" target="_blank">🐙 GitHub</a>
+          <a href="https://thinkbefore.web.app" target="_blank">📱 ThinkBefore</a>
+          <a href="mailto:essme786@gmail.com">✉️ essme786@gmail.com</a>
+        </div>
+
+        <!-- Availability -->
         <div class="hire-strip">
           <div class="hire-dot"></div>
           <p><strong>Available for freelance projects</strong> — dashboards, apps, MVPs. Usually respond within 24h.</p>
@@ -180,11 +210,10 @@
         </div>
       </section>
 
-      <!-- SERVICES PREVIEW -->
+      <!-- SERVICES -->
       <section class="services-preview">
         <h3>What I can do for you</h3>
         <p>Two freelance specialities, one point of contact.</p>
-
         <div class="service-row">
           <div class="service-mini">
             <div class="icon">📊</div>
@@ -215,14 +244,13 @@
             </div>
           </div>
         </div>
-
         <div class="section-cta">
           <p>Full service details, proof of work and why clients choose me →</p>
           <a href="about.html" class="btn btn-primary">About & services</a>
         </div>
       </section>
 
-      <!-- IDENTITY LEDGER -->
+      <!-- RECENT WORK -->
       <section style="padding: 0 0 56px; border-top: 1px solid var(--line);">
         <div style="padding-top: 40px; margin-bottom: 24px;">
           <p style="font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--teal); margin: 0 0 8px;">Recent work</p>
@@ -244,7 +272,6 @@
           <a href="projects.html" class="btn btn-ghost">View all projects →</a>
         </div>
       </section>
-
     </main>
 
     <footer>

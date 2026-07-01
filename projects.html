@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects — Essme El Hadjam</title>
+  <meta name="description" content="Portfolio projects: Power BI dashboards, Python analytics, SQL databases and ThinkBefore — a live web app by Essme El Hadjam.">
+  <meta property="og:title" content="Projects — Essme El Hadjam">
+  <meta property="og:description" content="Data Analysis and App Development projects by Essme El Hadjam.">
+  <meta property="og:url" content="https://essmem11.github.io/Portfolio/projects.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
@@ -26,7 +31,6 @@
     <section class="projects-header">
       <h2>Featured Projects</h2>
       <p>Dashboards that uncover insights, and an app that puts them to work.</p>
-
       <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="app">App Development</button>
@@ -36,82 +40,101 @@
 
     <section class="projects-grid" style="padding-top:0;">
 
+      <!-- THINKBEFORE -->
       <div class="project-card" data-category="app">
-        <div class="card-tags"><span class="tag tag-app">App Development</span></div>
+        <div class="card-tags">
+          <span class="tag tag-app">App Development</span>
+          <span class="tag" style="background:#e8f5e9;color:#2e7d32;">Live</span>
+        </div>
         <h3>📱 ThinkBefore — Spend with intention</h3>
         <p>A web app that fights impulse buying by converting any price into the number of work hours it actually costs you. Enter a price and your monthly income, and ThinkBefore shows the real cost in time — turning a quick purchase into a conscious decision.
 
 Built and shipped end-to-end: pricing tiers, a 48h wishlist to let urges fade, monthly spending charts, a goal tracker, CSV export, and a companion Chrome extension that surfaces the calculator while shopping online. Launched on Product Hunt and the Chrome Web Store.</p>
         <div class="card-links">
-          <a href="https://thinkbefore.web.app" target="_blank">Try the app →</a>
+          <a href="https://thinkbefore.web.app" target="_blank">🌐 Try the app →</a>
+          <a href="https://chromewebstore.google.com/detail/thinkbefore" target="_blank">🔌 Chrome extension →</a>
         </div>
       </div>
 
+      <!-- APPLE REVENUE -->
       <div class="project-card" data-category="data">
-        <div class="card-tags"><span class="tag tag-data">Data Analysis</span></div>
-        <h3>📊 Power BI — Apple's revenue</h3>
+        <div class="card-tags"><span class="tag tag-data">Data Analysis</span><span class="tag" style="background:#e3f2fd;color:#1565c0;">Power BI</span></div>
+        <h3>📊 Power BI — Apple's Revenue Dashboard</h3>
         <p>Collected Apple's revenue dataset from bullfincher.io, cleaned and transformed it for consistency across regions and fiscal years, then designed an interactive dashboard visualising revenue distribution across the Americas, Europe, Greater China, Japan and Asia-Pacific for 2022–2024.
 
-Used bar charts for regional comparison, a donut chart for yearly snapshots, stacked columns and line charts for trend analysis, and a filled map with pie markers to connect data to geography. Findings: the Americas remain the largest market but show slight decline, Europe shows steady growth, and Greater China shows a consistent decrease worth investigating — leading to recommendations on marketing investment and growth forecasting.</p>
+Key findings: the Americas remain the largest market but show slight decline; Europe shows steady growth; Greater China shows a consistent decrease — leading to recommendations on marketing investment reallocation and regional growth forecasting.</p>
         <div class="project-images">
           <img src="apple_dashboard.png" alt="Apple Revenue Dashboard" class="project-image" />
           <img src="apple maps.png" alt="Apple revenue map" class="project-image" />
         </div>
         <div class="card-links">
-          <a href="apple_dashboard.png" download>View dashboard</a>
-          <a href="apple maps.png" download>View map</a>
+          <a href="apple_dashboard.png" target="_blank">View dashboard →</a>
+          <a href="apple maps.png" target="_blank">View map →</a>
         </div>
       </div>
 
+      <!-- DRINKS DASHBOARD -->
       <div class="project-card" data-category="data">
-        <div class="card-tags"><span class="tag tag-data">Data Analysis</span></div>
-        <h3>📊 Power BI — Business Performance Summary</h3>
-        <p>An interactive dashboard analysing product performance by flavour in the UK market, highlighting units sold, gross revenue and unit cost through clear, strategic visualisations — turning complex data into actionable business insights.</p>
+        <div class="card-tags"><span class="tag tag-data">Data Analysis</span><span class="tag" style="background:#e3f2fd;color:#1565c0;">Power BI</span></div>
+        <h3>📊 Power BI — Business Performance Dashboard</h3>
+        <p>An interactive dashboard analysing product performance by flavour in the UK market, highlighting units sold, gross revenue and unit cost through clear, strategic visualisations. Designed to help a sales team identify top-performing SKUs and underperforming lines — turning complex sales data into actionable business decisions.</p>
         <div class="project-images">
           <img src="dashboard_drinks.png3.png" alt="Business Performance Dashboard" class="project-image" />
         </div>
         <div class="card-links">
-          <a href="dashboard_drinks.png3.png" download>View dashboard</a>
+          <a href="dashboard_drinks.png3.png" target="_blank">View dashboard →</a>
         </div>
       </div>
 
+      <!-- BATTERY INVENTORY -->
       <div class="project-card" data-category="data">
-        <div class="card-tags"><span class="tag tag-data">Data Analysis</span></div>
+        <div class="card-tags"><span class="tag tag-data">Data Analysis</span><span class="tag" style="background:#e3f2fd;color:#1565c0;">Power BI</span></div>
         <h3>📊 Battery Inventory Dashboard</h3>
-        <p>An interactive dashboard visualising battery sales and stock levels: total sales, available stock, quantity sold, and number of models tracked. Includes a pie chart of sales distribution by model (AA, C, D, 9V) and two line charts of monthly sales trends, overall and by model.</p>
+        <p>An inventory dashboard visualising battery sales and stock levels in real time: total sales, available stock, quantity sold, and number of models tracked. Includes a pie chart of sales distribution by model (AA, C, D, 9V), and two line charts of monthly sales trends — overall and broken down by model — to help stock managers plan replenishment accurately.</p>
         <div class="project-images">
           <img src="visualisation1.png" alt="Battery Inventory Dashboard" class="project-image" />
         </div>
       </div>
 
+      <!-- PYTHON -->
       <div class="project-card" data-category="data">
-        <div class="card-tags"><span class="tag tag-data">Data Analysis</span></div>
-        <h3>🐍 Python — Predictive data analytics</h3>
-        <p>Predictive data analytics on a dataset using algorithms to analyse and interpret the findings.</p>
+        <div class="card-tags"><span class="tag tag-data">Data Analysis</span><span class="tag" style="background:#fce4ec;color:#880e4f;">Python</span></div>
+        <h3>🐍 Python — Predictive Analytics</h3>
+        <p>End-to-end predictive analytics project in Python: loaded and explored a real dataset, handled missing values and outliers, applied supervised learning algorithms (including regression and classification), then evaluated model performance with accuracy scores and confusion matrices.
+
+Goal: demonstrate the full data science pipeline — from raw data to a model that makes reliable predictions — using pandas, scikit-learn and matplotlib.</p>
         <div class="project-images">
           <img src="phyton 1.png" alt="Python predictive analytics" class="project-image" />
-          <img src="Phyton2.png" alt="Python predictive analytics" class="project-image" />
-          <img src="Phyton3.png" alt="Python predictive analytics" class="project-image" />
-          <img src="phyton4.png" alt="Python predictive analytics" class="project-image" />
-          <img src="phyton5.png" alt="Python predictive analytics" class="project-image" />
+          <img src="Phyton2.png" alt="Python analytics" class="project-image" />
+          <img src="Phyton3.png" alt="Python analytics" class="project-image" />
+          <img src="phyton4.png" alt="Python analytics" class="project-image" />
+          <img src="phyton5.png" alt="Python analytics" class="project-image" />
         </div>
       </div>
 
+      <!-- SQL -->
       <div class="project-card" data-category="data">
-        <div class="card-tags"><span class="tag tag-data">Data Analysis</span></div>
-        <h3>🗄️ SQL — StudentRecords database</h3>
-        <p>Developed a relational database simulating a real-world academic system: a Student table (ID, name, address, age, gender, location) and a Course table, linked with a primary key on student ID and a planned foreign key relationship.
+        <div class="card-tags"><span class="tag tag-data">Data Analysis</span><span class="tag" style="background:#f3e5f5;color:#6a1b9a;">SQL</span></div>
+        <h3>🗄️ SQL — StudentRecords Database</h3>
+        <p>Designed and built a relational database simulating a real-world academic management system. Includes a Student table (ID, name, address, age, gender, location) and a Course table, linked with primary and foreign key relationships.
 
-Demonstrates relational modelling, attention to constraints, and the ability to troubleshoot and refine SQL scripts. Next steps: normalising the schema further, writing JOIN queries, and integrating with Python or Power BI for reporting.</p>
+Demonstrates: schema design, data integrity constraints, SQL scripting and troubleshooting. Next phase: normalising the schema to 3NF, writing complex JOIN and aggregate queries, and connecting the database to a Power BI report for live academic reporting.</p>
         <div class="project-images">
           <img src="SQL.png" alt="SQL StudentRecords project" class="project-image" />
         </div>
+        <div class="card-links">
+          <a href="https://github.com/essmem11" target="_blank">View on GitHub →</a>
+        </div>
       </div>
 
+      <!-- PORTFOLIO -->
       <div class="project-card" data-category="app">
         <div class="card-tags"><span class="tag tag-app">App Development</span></div>
         <h3>🌐 This portfolio</h3>
-        <p>Designed and coded with HTML/CSS, structured around a single identity that spans data analysis and app development — including a filterable project grid like the one you're looking at.</p>
+        <p>Designed and hand-coded in HTML/CSS — no templates, no frameworks. Built around a dual identity (Data Analyst × App Creator) with a filterable project grid, a freelance services section, Open Graph social previews, and a fully responsive layout. Hosted on GitHub Pages.</p>
+        <div class="card-links">
+          <a href="https://github.com/essmem11/Portfolio" target="_blank">View source on GitHub →</a>
+        </div>
       </div>
 
     </section>
@@ -124,13 +147,11 @@ Demonstrates relational modelling, attention to constraints, and the ability to 
   <script>
     const buttons = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.project-card');
-
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         buttons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const filter = btn.dataset.filter;
-
         cards.forEach(card => {
           if (filter === 'all' || card.dataset.category === filter) {
             card.classList.remove('hidden');
